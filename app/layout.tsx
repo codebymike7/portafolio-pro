@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "BitForge | Full Stack Developer",
+  title:Codex7 | Software Agency",
   description: "Arquitecturas escalables y rendimiento extremo diseñado por BitForge.",
 };
 
