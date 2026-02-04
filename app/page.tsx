@@ -1,13 +1,13 @@
 "use client";
 import { motion } from "framer-motion";
-import { Terminal, Code2, Cpu, Mail, ArrowUpRight, Github, Globe } from "lucide-react";
+import { Terminal, Code2, Mail, ArrowUpRight, Github, MessageCircle, Globe } from "lucide-react";
 
 export default function Home() {
   const container = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
-      transition: { staggerChildren: 0.12 }
+      transition: { staggerChildren: 0.1 }
     }
   };
 
@@ -24,7 +24,7 @@ export default function Home() {
         animate="show"
         className="max-w-4xl w-full space-y-4"
       >
-        {/* Header Codex7 con el 7 Dinámico */}
+        {/* Header Codex7 */}
         <motion.div variants={item} className="bg-white/5 border border-white/10 p-8 rounded-[2.5rem] backdrop-blur-3xl relative overflow-hidden group">
           <motion.div 
             animate={{ opacity: [0.05, 0.12, 0.05], scale: [1, 1.05, 1] }} 
@@ -43,61 +43,68 @@ export default function Home() {
 
         {/* Bento Grid Principal */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {/* Tecnologías */}
           <motion.div variants={item} className="md:col-span-2 bg-white/5 border border-white/10 p-6 rounded-[2.5rem] flex flex-col justify-between min-h-[200px]">
-            <div className="flex justify-between items-start">
-              <span className="text-gray-500 font-mono text-[10px] uppercase tracking-widest italic">Core Technology</span>
+            <div className="flex justify-between items-start text-gray-500 font-mono text-[10px] uppercase tracking-widest italic">
+              <span>Stack Tecnológico</span>
               <Code2 size={18} className="text-blue-500" />
             </div>
             <div className="flex flex-wrap gap-x-6 gap-y-3 text-2xl md:text-3xl font-bold tracking-tighter">
-              <span className="hover:text-blue-400 transition-colors">Next.js 14</span>
-              <span className="hover:text-yellow-400 transition-colors">TypeScript</span>
-              <span className="hover:text-green-400 transition-colors">Node.js</span>
+              <span className="text-white/90">Next.js 14</span>
+              <span className="text-white/90">TypeScript</span>
+              <span className="text-white/70">Node.js</span>
             </div>
           </motion.div>
 
-          {/* Botón Github */}
+          {/* WhatsApp Directo */}
           <motion.a 
             variants={item}
-            href="https://github.com/codebymike7" 
+            href="https://wa.me/5491136139401?text=Hola%20Codex7!%20Me%20interesa%20un%20proyecto."
             target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.02 }}
-            className="bg-white text-black p-6 rounded-[2.5rem] flex flex-col justify-between group transition-all"
+            className="bg-green-600 p-6 rounded-[2.5rem] flex flex-col justify-between group transition-all"
           >
-            <Github size={28} />
-            <div className="flex items-end justify-between">
-              <span className="font-bold text-xl uppercase leading-none italic">Github<br/>Project</span>
+            <div className="flex justify-between items-start">
+              <MessageCircle size={28} />
               <ArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+            </div>
+            <div>
+              <p className="text-[10px] font-mono uppercase font-bold opacity-70">Fast Response</p>
+              <p className="text-2xl font-bold italic tracking-tighter text-white">WhatsApp</p>
             </div>
           </motion.a>
         </div>
 
         {/* Grid Inferior */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-           <motion.div variants={item} className="bg-white/5 border border-white/10 p-6 rounded-[2rem] aspect-square flex flex-col justify-center items-center gap-2 text-center">
-            <Cpu size={24} className="text-purple-500" />
-            <span className="text-[10px] font-mono text-gray-400 uppercase italic">High<br/>Performance</span>
-          </motion.div>
-
-          <motion.div variants={item} className="bg-white/5 border border-white/10 p-6 rounded-[2rem] aspect-square flex flex-col justify-center items-center gap-2 text-center">
-            <Globe size={24} className="text-emerald-500" />
-            <span className="text-[10px] font-mono text-gray-400 uppercase italic">Scalable<br/>Apps</span>
-          </motion.div>
-
-          {/* Botón de Contacto Final con tu ID mzdvnarr */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {/* Botón Formspree (Email) */}
           <motion.a 
             variants={item}
             href="https://formspree.io/f/mzdvnarr"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.02 }}
-            className="col-span-2 bg-blue-600 p-6 rounded-[2.5rem] flex items-center justify-between group overflow-hidden relative"
+            className="md:col-span-2 bg-blue-600 p-6 rounded-[2.5rem] flex items-center justify-between group overflow-hidden relative"
           >
             <div className="relative z-10">
-              <p className="text-[10px] font-mono uppercase font-bold opacity-70">New Project?</p>
-              <p className="text-2xl font-bold italic tracking-tighter">Contact Codex7</p>
+              <p className="text-[10px] font-mono uppercase font-bold opacity-70">Inquiries</p>
+              <p className="text-2xl font-bold italic tracking-tighter text-white">Send an Email</p>
             </div>
             <Mail size={32} className="relative z-10 group-hover:rotate-12 transition-transform duration-500" />
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+            <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity" />
+          </motion.a>
+
+          {/* Github */}
+          <motion.a 
+            variants={item}
+            href="https://github.com/codebymike7"
+            target="_blank"
+            whileHover={{ scale: 1.02 }}
+            className="bg-white/5 border border-white/10 p-6 rounded-[2.5rem] flex flex-col justify-between group transition-all"
+          >
+             <Github size={24} className="text-white/50 group-hover:text-white transition-colors" />
+             <p className="text-xl font-bold italic tracking-tighter">Github</p>
           </motion.a>
         </div>
       </motion.div>
