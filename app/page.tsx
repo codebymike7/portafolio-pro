@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { Terminal, Code2, Mail, ArrowUpRight, Github, MessageCircle, Globe } from "lucide-react";
+import { Terminal, Code2, Mail, ArrowUpRight, Github, MessageCircle } from "lucide-react";
 
 export default function Home() {
   const container = {
@@ -43,7 +43,6 @@ export default function Home() {
 
         {/* Bento Grid Principal */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {/* Tecnologías */}
           <motion.div variants={item} className="md:col-span-2 bg-white/5 border border-white/10 p-6 rounded-[2.5rem] flex flex-col justify-between min-h-[200px]">
             <div className="flex justify-between items-start text-gray-500 font-mono text-[10px] uppercase tracking-widest italic">
               <span>Stack Tecnológico</span>
@@ -56,7 +55,7 @@ export default function Home() {
             </div>
           </motion.div>
 
-          {/* WhatsApp Directo */}
+          {/* WhatsApp Directo - codebymike7 */}
           <motion.a 
             variants={item}
             href="https://wa.me/5491136139401?text=Hola%20Codex7!%20Me%20interesa%20un%20proyecto."
@@ -78,18 +77,16 @@ export default function Home() {
 
         {/* Grid Inferior */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {/* Botón Formspree (Email) */}
+          {/* Botón Email Directo (Abre la App de Mail) */}
           <motion.a 
             variants={item}
-            href="https://formspree.io/f/mzdvnarr"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:codebymike7@gmail.com?subject=Consulta%20Proyecto%20Codex7"
             whileHover={{ scale: 1.02 }}
             className="md:col-span-2 bg-blue-600 p-6 rounded-[2.5rem] flex items-center justify-between group overflow-hidden relative"
           >
             <div className="relative z-10">
-              <p className="text-[10px] font-mono uppercase font-bold opacity-70">Inquiries</p>
-              <p className="text-2xl font-bold italic tracking-tighter text-white">Send an Email</p>
+              <p className="text-[10px] font-mono uppercase font-bold opacity-70">Direct Mail</p>
+              <p className="text-2xl font-bold italic tracking-tighter text-white">codebymike7@gmail.com</p>
             </div>
             <Mail size={32} className="relative z-10 group-hover:rotate-12 transition-transform duration-500" />
             <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity" />
