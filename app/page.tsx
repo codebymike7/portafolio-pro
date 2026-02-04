@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { Terminal, Code2, Cpu, Mail, ArrowUpRight, Github, Linkedin } from "lucide-react";
+import { Terminal, Code2, Cpu, Mail, ArrowUpRight, Github } from "lucide-react";
 
 export default function Home() {
   const container = {
@@ -24,7 +24,7 @@ export default function Home() {
         animate="show"
         className="max-w-4xl w-full space-y-4"
       >
-        {/* Header Codex7 con el 7 de fondo */}
+        {/* Header Codex7 */}
         <motion.div variants={item} className="bg-white/5 border border-white/10 p-8 rounded-[2.5rem] backdrop-blur-3xl relative overflow-hidden group">
           <motion.div 
             animate={{ opacity: [0.05, 0.15, 0.05], scale: [1, 1.05, 1] }} 
@@ -33,15 +33,15 @@ export default function Home() {
           >
             7
           </motion.div>
-          <h1 className="text-6xl md:text-8xl font-bold tracking-tighter bg-gradient-to-b from-white to-gray-500 bg-clip-text text-transparent italic">
+          <h1 className="text-6xl md:text-8xl font-bold tracking-tighter bg-gradient-to-b from-white to-gray-500 bg-clip-text text-transparent italic text-center md:text-left">
             Codex7_
           </h1>
-          <p className="text-blue-400 font-mono mt-4 flex items-center gap-2 tracking-[0.2em] text-[10px] uppercase font-bold">
+          <p className="text-blue-400 font-mono mt-4 flex items-center justify-center md:justify-start gap-2 tracking-[0.2em] text-[10px] uppercase font-bold">
             <Terminal size={14} className="animate-pulse" /> Fullstack Elite Solutions
           </p>
         </motion.div>
 
-        {/* Bento Grid Superior */}
+        {/* Bento Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <motion.div variants={item} className="md:col-span-2 bg-white/5 border border-white/10 p-6 rounded-[2.5rem] flex flex-col justify-between min-h-[200px]">
             <div className="flex justify-between items-start">
@@ -49,50 +49,26 @@ export default function Home() {
               <Code2 size={18} className="text-blue-500" />
             </div>
             <div className="flex flex-wrap gap-x-6 gap-y-3 text-2xl md:text-3xl font-bold tracking-tighter">
-              <span className="hover:text-blue-400 transition-colors cursor-default">Next.js 14</span>
-              <span className="hover:text-yellow-400 transition-colors cursor-default">TypeScript</span>
-              <span className="hover:text-green-400 transition-colors cursor-default">Node.js</span>
+              <span>Next.js 14</span>
+              <span>TypeScript</span>
+              <span>Node.js</span>
             </div>
-          </motion.div>
-
-          <motion.a 
-            variants={item}
-            href="https://github.com/codebymike7" 
-            target="_blank"
-            whileHover={{ scale: 1.02 }}
-            className="bg-white text-black p-6 rounded-[2.5rem] flex flex-col justify-between group transition-all"
-          >
-            <Github size={28} />
-            <div className="flex items-end justify-between">
-              <span className="font-bold text-xl uppercase leading-none">Github<br/>Profile</span>
-              <ArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-            </div>
-          </motion.a>
-        </div>
-
-        {/* Bento Grid Inferior */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-           <motion.div variants={item} className="bg-white/5 border border-white/10 p-6 rounded-[2rem] aspect-square flex flex-col justify-center items-center gap-2 text-center">
-            <Cpu size={24} className="text-purple-500" />
-            <span className="text-[10px] font-mono text-gray-400 uppercase tracking-tighter italic leading-none">Performance<br/>Focused</span>
-          </motion.div>
-
-          <motion.div variants={item} className="bg-white/5 border border-white/10 p-6 rounded-[2rem] aspect-square flex flex-col justify-center items-center gap-2 text-center">
-            <Globe size={24} className="text-emerald-500" />
-            <span className="text-[10px] font-mono text-gray-400 uppercase tracking-tighter italic leading-none">Global<br/>Scalability</span>
           </motion.div>
 
           <motion.a 
             variants={item}
             href="mailto:tu-correo@ejemplo.com"
-            className="col-span-2 bg-blue-600 p-6 rounded-[2.5rem] flex items-center justify-between group overflow-hidden relative"
+            whileHover={{ scale: 1.02 }}
+            className="bg-blue-600 p-6 rounded-[2.5rem] flex flex-col justify-between group transition-all"
           >
-            <div className="relative z-10">
-              <p className="text-[10px] font-mono uppercase font-bold opacity-70">Ready to start?</p>
-              <p className="text-2xl font-bold italic tracking-tighter">Contact Codex7</p>
+            <div className="flex justify-between items-start">
+              <Mail size={24} />
+              <ArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
             </div>
-            <Mail size={32} className="relative z-10 group-hover:rotate-12 transition-transform duration-500" />
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+            <div>
+              <p className="text-[10px] font-mono uppercase font-bold opacity-70">Ready to start?</p>
+              <p className="text-2xl font-bold italic tracking-tighter">Contact Us</p>
+            </div>
           </motion.a>
         </div>
       </motion.div>
